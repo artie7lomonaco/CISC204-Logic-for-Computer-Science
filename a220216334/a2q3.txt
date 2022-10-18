@@ -1,0 +1,17 @@
+write the tseitin encoding for: ~(((S|(P&~Q))&(~S|S))|(Q&(~P&S))) and attach file for parse tree.
+
+a3tseitin = semantic_interface.Encoding()
+x1 = a3tseitin.tseitin(S, 'x1')
+x2 = a3tseitin.tseitin(Q, 'x2')
+x3 = a3tseitin.tseitin(~x2, 'x3')
+x4 = a3tseitin.tseitin(P % x3, 'x4')
+x5 = a3tseitin.tseitin(x1 | x4, 'x5')
+x6 = a3tseitin.tseitin(~x1, 'x6')
+x7 = a3tseitin.tseitin(x6 | x1, 'x7')
+x8 = a3tseitin.tseitin(x5 & x7, 'x8')
+x9 = a3tseitin.tseitin(P, 'x9')
+x10 = a3tseitin.tseitin(~x9, 'x10')
+x11 = a3tseitin.tseitin(x10 & x1, 'x11')
+x12 = a3tseitin.tseitin(Q & x11, 'x12')
+x13 = a3tseitin.tseitin(x8 V x12, 'x13')
+x14 = a3tseitin.tseitin(~x13, 'x14')
