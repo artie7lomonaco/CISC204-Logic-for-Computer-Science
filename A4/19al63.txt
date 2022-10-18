@@ -1,0 +1,46 @@
+In this assignment, you will be converting concepts all about famous people eating food they like at dining halls.
+
+[Predicates]
+
+S(x): x is a student
+H(x): x is a dining hall
+F(x): x is full
+W(x): x is famous
+E(x, y): x eats at y
+D(x, y): x dislikes food at y
+K(x, y): x knows y
+G(x, y): x eats food they dislike at y
+
+
+[Q1: Translate sentence to logic (1pt)]
+
+If there is a student who is famous, then every student knows them.
+
+Answer: ∃y∀x((S(y)^W(y))→K(x,y))
+
+
+[Q2: Translate sentence to logic (1pt)]
+
+A student dislikes food at a dining hall.
+
+Answer: ∃x∃y(S(x)^D(x,y))
+
+
+[Q3: Translate sentence to logic (2pt)]
+
+If a student is famous then they do not eat at a dining hall.
+
+Answer: ∃x∀y((S(x)^W(x))→¬E(x,y))
+
+
+[Q4: Translate formula to English (1pt)]
+
+∃x∃y(S(x)∧H(y)∧(E(x,y)→F(x)))
+
+Answer: There is a student that eats at a certain dining hall, then he is full.
+
+
+[Q5: Invent a Problem (1pt)]
+Question: If a student eats at a dining hall he doesn't like, then they are not full.
+
+Answer: ∀x∀y((S(x)^H(x))^D(x,y)^(E(x,y)→¬F(x)))

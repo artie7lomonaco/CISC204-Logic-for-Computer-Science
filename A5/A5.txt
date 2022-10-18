@@ -1,0 +1,71 @@
+-----------------------------------------------------------------------
+
+Question 1:
+F1 = (∀x.S(x)→¬∀z.R(z))
+
+a. A model that evaluates to T
+Domain = {0}
+S={(0)} 
+R={}
+
+b. A model that evaluates to F
+Domain = {0,1,2)
+ P={(0)} 
+R={(0)}
+
+--------------------------------------------------------------------
+
+Question 2:
+F2 = (∀z.∀x.P(z,x)∧∀z.(¬∃x.P(z,x)→¬R(z)))
+
+a. A model that evaluates to T
+Domain = {0,1}
+P={(0,1)} 
+R={}
+
+
+b. A model that evaluates to F
+Domain = {0,1}
+P={} 
+R={}
+
+-------------------------------------------------------------------
+
+Question 3:
+F3 = (∀y.(Q(y)→∀x.T(y,x))∨∀y.∀x.T(y,x))
+F4 = (∀y.Q(y)∧∀y.(∃x.T(y,x)∧Q(y)))
+
+a. A model that satisfies F3 but not F4
+Domain = {0,1}
+Q={}
+T={(0,0)}
+
+b. A model that satisfies F4 but not F3
+Domain = {0}
+Q={0}
+T={(0,0)}
+
+c. A model that satisfies both F3 and F4
+Domain = {0,1}
+Q={(1)}
+T={(0,1)}
+
+
+d. A model that doesn't satisfy either F3 or F4
+Domain = {0,1}
+Q={}
+T={}
+
+----------------------------------------------------------------
+
+Question 4:
+Given the formula F5, F3 = ∃x∀y.(T(y,x))∨Q(y))→∀x∃y.(Q(x)→T(y,x))
+
+Create a Formula for which the model M is satisfied.
+
+M:
+domain = {0,1}
+T={(0,1)}
+Q={}
+
+-----------------------------------------------------------------
